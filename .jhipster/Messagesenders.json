@@ -1,0 +1,46 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "sender_id",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "2"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "1"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "type",
+            "fieldType": "TemplateType",
+            "fieldValues": "TRANSACTIONAL_EMAIL,TRANSACTIONAL_SMS,PROMOTIONAL_EMAIL,PROMOTIONAL_SMS,DUMMY_TRANSACTIONAL_EMAIL",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "status",
+            "fieldType": "Message_sender_status",
+            "fieldValues": "APPROVED,DISABLED",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151211094848",
+    "dto": "no",
+    "pagination": "pagination"
+}

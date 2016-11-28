@@ -1,0 +1,95 @@
+<div>
+    <h2>CallDetailss</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="callDetails.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+class="hidden-xs"                       >Create new CallDetails
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="{{ 'naradApp.callDetails.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="search()">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="requestId"><span>RequestId</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="callerId"><span>CallerId</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dialedNumber"><span>DialedNumber</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startTime"><span>StartTime</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="endTime"><span>EndTime</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="timeToAnswer"><span>TimeToAnswer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="duration"><span>Duration</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="location"><span>Location</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="agentUniqueID"><span>AgentUniqueID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span>Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="response"><span>Response</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="count"><span>Count</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderid"><span>Orderid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="callDetails in callDetailss track by callDetails.id">
+                    <td><a ui-sref="callDetails.detail({id:callDetails.id})">{{callDetails.id}}</a></td>
+                    <td>{{callDetails.requestId}}</td>
+                    <td>{{callDetails.callerId}}</td>
+                    <td>{{callDetails.dialedNumber}}</td>
+                    <td>{{callDetails.startTime | date:'medium'}}</td>
+                    <td>{{callDetails.endTime | date:'medium'}}</td>
+                    <td>{{callDetails.timeToAnswer}}</td>
+                    <td>{{callDetails.duration}}</td>
+                    <td>{{callDetails.location}}</td>
+                    <td>{{callDetails.agentUniqueID}}</td>
+                    <td>{{callDetails.status}}</td>
+                    <td>{{callDetails.response}}</td>
+                    <td>{{callDetails.count}}</td>
+                    <td>{{callDetails.orderid}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="callDetails.detail({id:callDetails.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="callDetails.edit({id:callDetails.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="callDetails.delete({id:callDetails.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

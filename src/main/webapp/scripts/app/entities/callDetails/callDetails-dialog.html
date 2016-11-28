@@ -1,0 +1,103 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCallDetailsLabel">Create or edit a CallDetails</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="callDetails.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_requestId">RequestId</label>
+            <input type="text" class="form-control" name="requestId" id="field_requestId"
+                    ng-model="callDetails.requestId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_callerId">CallerId</label>
+            <input type="text" class="form-control" name="callerId" id="field_callerId"
+                    ng-model="callDetails.callerId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dialedNumber">DialedNumber</label>
+            <input type="text" class="form-control" name="dialedNumber" id="field_dialedNumber"
+                    ng-model="callDetails.dialedNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_startTime">StartTime</label>
+            <input type="datetime-local" class="form-control" name="startTime" id="field_startTime"
+                    ng-model="callDetails.startTime"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_endTime">EndTime</label>
+            <input type="datetime-local" class="form-control" name="endTime" id="field_endTime"
+                    ng-model="callDetails.endTime"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_timeToAnswer">TimeToAnswer</label>
+            <input type="text" class="form-control" name="timeToAnswer" id="field_timeToAnswer"
+                    ng-model="callDetails.timeToAnswer"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_duration">Duration</label>
+            <input type="text" class="form-control" name="duration" id="field_duration"
+                    ng-model="callDetails.duration"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_location">Location</label>
+            <input type="text" class="form-control" name="location" id="field_location"
+                    ng-model="callDetails.location"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_agentUniqueID">AgentUniqueID</label>
+            <input type="text" class="form-control" name="agentUniqueID" id="field_agentUniqueID"
+                    ng-model="callDetails.agentUniqueID"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="callDetails.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_response">Response</label>
+                <textarea class="form-control" name="response" id="field_response"
+                    ng-model="callDetails.response"  />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_count">Count</label>
+            <input type="number" class="form-control" name="count" id="field_count"
+                    ng-model="callDetails.count"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_orderid">Orderid</label>
+            <input type="text" class="form-control" name="orderid" id="field_orderid"
+                    ng-model="callDetails.orderid"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

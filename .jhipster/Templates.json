@@ -1,0 +1,74 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "template_id",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "2"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "message",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "3"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "status",
+            "fieldType": "TemplateStatus",
+            "fieldValues": "NEW,PENDING_APPROVAL,APPROVED,DISABLED",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "creation_time",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "approval_time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "disabled_time",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "type",
+            "fieldType": "TemplateType",
+            "fieldValues": "TRANSACTIONAL_EMAIL,TRANSACTIONAL_SMS,PROMOTIONAL_EMAIL,PROMOTIONAL_SMS,DUMMY_TRANSACTIONAL_EMAIL",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "module",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "2"
+        }
+    ],
+    "changelogDate": "20151109092407",
+    "dto": "no",
+    "pagination": "pagination"
+}

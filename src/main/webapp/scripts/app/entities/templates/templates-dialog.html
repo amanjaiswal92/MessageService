@@ -1,0 +1,133 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTemplatesLabel">Create or edit a Templates</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="templates.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_template_id">Template_id</label>
+            <input type="text" class="form-control" name="template_id" id="field_template_id"
+                    ng-model="templates.template_id"
+                    required ng-minlength="2" />
+            <div ng-show="editForm.template_id.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.template_id.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.template_id.$error.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_message">Message</label>
+            <input type="text" class="form-control" name="message" id="field_message"
+                    ng-model="templates.message"
+                    required ng-minlength="3" />
+            <div ng-show="editForm.message.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.message.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.message.$error.minlength" translate-value-min="3">
+                    This field is required to be at least 3 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="templates.status" id="field_status" required>
+                <option value="NEW">NEW</option>
+                <option value="PENDING_APPROVAL">PENDING_APPROVAL</option>
+                <option value="APPROVED">APPROVED</option>
+                <option value="DISABLED">DISABLED</option>
+            </select>
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_creation_time">Creation_time</label>
+            <input type="datetime-local" class="form-control" name="creation_time" id="field_creation_time"
+                    ng-model="templates.creation_time"
+                    required />
+            <div ng-show="editForm.creation_time.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.creation_time.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.creation_time.$error.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_approval_time">Approval_time</label>
+            <input type="datetime-local" class="form-control" name="approval_time" id="field_approval_time"
+                    ng-model="templates.approval_time"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_disabled_time">Disabled_time</label>
+            <input type="datetime-local" class="form-control" name="disabled_time" id="field_disabled_time"
+                    ng-model="templates.disabled_time"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="templates.type" id="field_type" required>
+                <option value="TRANSACTIONAL_EMAIL">TRANSACTIONAL_EMAIL</option>
+                <option value="TRANSACTIONAL_SMS">TRANSACTIONAL_SMS</option>
+                <option value="PROMOTIONAL_EMAIL">PROMOTIONAL_EMAIL</option>
+                <option value="PROMOTIONAL_SMS">PROMOTIONAL_SMS</option>
+                <option value="DUMMY_TRANSACTIONAL_EMAIL">DUMMY_TRANSACTIONAL_EMAIL</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_module">Module</label>
+            <input type="text" class="form-control" name="module" id="field_module"
+                    ng-model="templates.module"
+                    required ng-minlength="2" />
+            <div ng-show="editForm.module.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.module.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.module.$error.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

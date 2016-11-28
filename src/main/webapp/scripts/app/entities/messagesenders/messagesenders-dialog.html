@@ -1,0 +1,87 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myMessagesendersLabel">Create or edit a Messagesenders</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="messagesenders.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_sender_id">Sender_id</label>
+            <input type="text" class="form-control" name="sender_id" id="field_sender_id"
+                    ng-model="messagesenders.sender_id"
+                    required ng-minlength="2" />
+            <div ng-show="editForm.sender_id.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sender_id.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.sender_id.$error.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="messagesenders.name"
+                    required ng-minlength="1" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="messagesenders.type" id="field_type" required>
+                <option value="TRANSACTIONAL_EMAIL">TRANSACTIONAL_EMAIL</option>
+                <option value="TRANSACTIONAL_SMS">TRANSACTIONAL_SMS</option>
+                <option value="PROMOTIONAL_EMAIL">PROMOTIONAL_EMAIL</option>
+                <option value="PROMOTIONAL_SMS">PROMOTIONAL_SMS</option>
+                <option value="DUMMY_TRANSACTIONAL_EMAIL">DUMMY_TRANSACTIONAL_EMAIL</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="messagesenders.status" id="field_status" required>
+                <option value="APPROVED">APPROVED</option>
+                <option value="DISABLED">DISABLED</option>
+            </select>
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

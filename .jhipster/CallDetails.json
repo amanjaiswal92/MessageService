@@ -1,0 +1,84 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "requestId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "callerId",
+            "fieldType": "String"
+           
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dialedNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "startTime",
+            "fieldType": "ZonedDateTime"
+            
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "endTime",
+            "fieldType": "ZonedDateTime"
+            
+        },
+{
+            "fieldId": 6,
+            "fieldName": "timeToAnswer",
+            "fieldType": "String"
+            
+        },
+{
+            "fieldId": 7,
+            "fieldName": "duration",
+            "fieldType": "String"
+            
+        },
+
+       {
+            "fieldId": 8,
+            "fieldName": "location",
+            "fieldType": "String"
+        },
+         {
+            "fieldId": 9,
+            "fieldName": "agentUniqueID",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "status",
+            "fieldType": "String"
+        },{
+           "fieldId": 11,
+           "fieldName": "response",
+           "fieldType": "byte[]",
+           "fieldTypeBlobContent": "text"
+            
+        },
+        {
+           "fieldId": 12,
+           "fieldName": "count",
+           "fieldType": "Long"
+            
+        },{
+           "fieldId": 13,
+           "fieldName": "orderid",
+           "fieldType": "String"
+            
+        }
+    ],
+    "changelogDate": "20160913122210",
+    "dto": "no",
+    "service": "no",
+    "pagination": "pagination"
+}

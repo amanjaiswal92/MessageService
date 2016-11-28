@@ -1,0 +1,61 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myCallRequestLabel">Create or edit a CallRequest</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="callRequest.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_requestId">RequestId</label>
+            <input type="text" class="form-control" name="requestId" id="field_requestId"
+                    ng-model="callRequest.requestId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_phoneno">Phoneno</label>
+            <input type="text" class="form-control" name="phoneno" id="field_phoneno"
+                    ng-model="callRequest.phoneno"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_consignmentid">Consignmentid</label>
+            <input type="text" class="form-control" name="consignmentid" id="field_consignmentid"
+                    ng-model="callRequest.consignmentid"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_response">Response</label>
+                <textarea class="form-control" name="response" id="field_response"
+                    ng-model="callRequest.response"  />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_body">Body</label>
+            <input type="text" class="form-control" name="body" id="field_body"
+                    ng-model="callRequest.body"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_cancelled">Cancelled</label>
+            <input type="checkbox" class="form-control" name="cancelled" id="field_cancelled"
+                    ng-model="callRequest.cancelled"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+branch-defaults:
+  default:
+    environment: naradDev-env
+global:
+  application_name: narad-dev
+  default_ec2_keyname: null
+  default_platform: 64bit Amazon Linux 2015.09 v2.0.4 running Tomcat 8 Java 8
+  default_region: us-east-1
+  profile: null
+  sc: null
+deploy:
+  artifact: /var/lib/jenkins/jobs/NaradDevBuild/workspace/build/libs/ROOT.war

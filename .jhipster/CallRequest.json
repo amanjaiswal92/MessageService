@@ -1,0 +1,41 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "requestId",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "phoneno",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "consignmentid",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "response",
+            "fieldType": "byte[]",
+           "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "body",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "cancelled",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20160913123545",
+    "dto": "no",
+    "service": "no",
+    "pagination": "no"
+}

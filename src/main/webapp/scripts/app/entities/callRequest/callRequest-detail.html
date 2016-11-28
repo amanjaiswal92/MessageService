@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span>CallRequest</span> {{callRequest.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>RequestId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.requestId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Phoneno</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.phoneno}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Consignmentid</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.consignmentid}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Response</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.response}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Body</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.body}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Cancelled</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callRequest.cancelled}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

@@ -1,0 +1,24 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "templates",
+            "otherEntityName": "templates",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "template_id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151109092732",
+    "dto": "no",
+    "pagination": "pagination"
+}

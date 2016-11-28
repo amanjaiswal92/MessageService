@@ -1,0 +1,40 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "requestId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "type",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "request",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+	{
+	    "fieldId": 4,
+            "fieldName": "update_time",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]	
+	}
+    ],
+    "changelogDate": "20161019135256",
+    "dto": "no",
+    "pagination": "pagination"
+}

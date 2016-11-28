@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "narad",
+    "packageName": "com.ail.narad",
+    "packageFolder": "com/ail/narad",
+    "authenticationType": "xauth",
+    "hibernateCache": "hazelcast",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "gradle",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "2f9f3c190d4f3b744abc255628080bea35901967",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

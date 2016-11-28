@@ -1,0 +1,8 @@
+{
+  "realm": "AILSecure",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoDpanfCn0V/3RdYKUwsRhBGu8qA+MxdItMJBe7smUDHkDyNSU0vjjtyfs3Vug0Qc/X+3wauuDlE0nqzFAl5IXKANcNRlY3OzzT2yIXsyh1WC0VbgAca0XxLaJiOw5BsyrdrHOClwRICJEipWlThHrGU4xZzltmHmd3viHY61bfQcrccDwqG9aCQDhqp8Q9pnWTd+CnRs1alU7pk+Rh6IwnxfMrj08Kuz5+0ADm+ZkHHrXgtc+i/MpNpMBKLFbF5feKxE2LpA5V70n4qgbb/DY/kCrT5zxhccq1T+ddRs3A56V3MRPq81HMREcvid8YV9t2w/wYVuf3Cjg2fpkUPL8wIDAQAB",
+  "bearer-only": true,
+  "auth-server-url": "https://secure.nnnow.com/auth",
+  "ssl-required": "none",
+  "resource": "narad"
+}

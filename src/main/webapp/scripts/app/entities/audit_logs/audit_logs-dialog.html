@@ -1,0 +1,79 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myAudit_logsLabel">Create or edit a Audit_logs</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="audit_logs.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_requestId">RequestId</label>
+            <input type="text" class="form-control" name="requestId" id="field_requestId"
+                    ng-model="audit_logs.requestId"
+                    required />
+            <div ng-show="editForm.requestId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.requestId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_event">Event</label>
+            <select class="form-control" name="event" ng-model="audit_logs.event" id="field_event" required>
+                <option value="NEW">NEW</option>
+                <option value="ADDED_TO_QUEUE">ADDED_TO_QUEUE</option>
+                <option value="DEQUEUED_FROM_QUEUE">DEQUEUED_FROM_QUEUE</option>
+                <option value="SENT_TO_SERVICE_PROVIDER">SENT_TO_SERVICE_PROVIDER</option>
+                <option value="DELIVERED">DELIVERED</option>
+                <option value="FAILED">FAILED</option>
+                <option value="INTERRUPTED">INTERRUPTED</option>
+                <option value="UNKNOWN">UNKNOWN</option>
+            </select>
+            <div ng-show="editForm.event.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.event.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_message">Message</label>
+            <input type="text" class="form-control" name="message" id="field_message"
+                    ng-model="audit_logs.message"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_updated_time">Updated_time</label>
+            <input type="datetime-local" class="form-control" name="updated_time" id="field_updated_time"
+                    ng-model="audit_logs.updated_time"
+                    required />
+            <div ng-show="editForm.updated_time.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.updated_time.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.updated_time.$error.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

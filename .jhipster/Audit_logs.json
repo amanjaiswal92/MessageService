@@ -1,0 +1,38 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "requestId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "event",
+            "fieldType": "AuditEvent",
+            "fieldValues": "NEW,ADDED_TO_QUEUE,DEQUEUED_FROM_QUEUE,SENT_TO_SERVICE_PROVIDER,DELIVERED,FAILED,INTERRUPTED,UNKNOWN",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "message",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "updated_time",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151215135449",
+    "dto": "no",
+    "pagination": "pagination"
+}

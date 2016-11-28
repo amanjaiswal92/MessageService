@@ -1,0 +1,126 @@
+
+<div>
+    <h2><span>CallDetails</span> {{callDetails.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>RequestId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.requestId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>CallerId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.callerId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>DialedNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.dialedNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>StartTime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.startTime | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EndTime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.endTime | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TimeToAnswer</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.timeToAnswer}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Duration</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.duration}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Location</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.location}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>AgentUniqueID</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.agentUniqueID}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Status</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.status}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Response</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.response}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Count</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.count}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Orderid</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{callDetails.orderid}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>
